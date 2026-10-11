@@ -1,0 +1,120 @@
+---
+layout: default
+---
+
+{% include site-header.html %}
+
+<main class="main  container">
+	<article class="article  article--page  content  typeset">
+		<h1>{{ page.title }}</h1>
+	</article>
+</main>
+
+{% if page.carousel == true %}
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <main class="container">
+    <div class="wrapper">
+      <div class="carousel owl-carousel">
+      	{% assign folder1 = site.tutorials | where_exp: "item" , "item.path contains 'tissuumaps_3'"%}
+        {% for item in folder1 %}
+        <div class="card">
+          <div class="img">
+            <a href="#{{ item.perm_id }}"><img src="{{ item.feature_image }}" alt=""></a>
+          </div>
+          <div class="content">
+            <div class="title">
+              {{ item.title }}
+            </div>
+            <!--<p>
+              {{ item.summary }}
+            </p>-->
+            <div class="btn">
+              <a href="#{{ item.perm_id }}" class="button">▼ See video ▼</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </main>
+  <br/>
+  <script>
+    $(".carousel").owlCarousel({
+      margin: 20,
+      loop: false,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+      responsive: {
+        0:{
+          items:1,
+          nav: false
+        },
+        600:{
+          items:2,
+          nav: false
+        },
+        1000:{
+          items:3,
+          nav: false
+        },
+        1200:{
+          items:4,
+          nav: false
+        }
+      }
+    });
+  </script>
+{% endif %}
+
+<main class="container">
+	<article class="article  article--page  content  typeset">
+		<h3> TissUUmaps 3.1 tutorials </h3> 
+	</article>
+	{% assign folder1 = site.tutorials | where_exp: "item" , "item.path contains 'tissuumaps_3'"%}
+    {% for item in folder1 %}
+    <article class="article  article--page  content  typeset row">
+      <div class='column'>
+        <a target="_blank" href="{{ item.link }}">
+          {% if item.video_url %}
+		        <iframe title="vimeo-player" src="{{ item.video_url }}" width="792" height="445.5" frameborder="0" allowfullscreen style="max-width:100%;"></iframe>
+          {% else if item.feature_image %}
+            <img src="{{ item.feature_image }}" width="792" height="445.5"/>
+          {% endif %}
+        </a>
+      </div>
+      <div class='column'>
+        <h5 id="{{ item.perm_id }}">{{ item.title }}</h5><br/>
+        {{ item.excerpt }}
+      </div>
+    </article>
+    <hr/>
+  {% endfor %}
+  <hr/>
+  	<article class="article  article--page  content  typeset">
+		<h3> TissUUmaps 1.0 tutorials </h3> 
+		The videos below are part of the first release of TissUUmaps.
+		
+	</article>
+	{% assign folder1 = site.tutorials | where_exp: "item" , "item.path contains 'tissuumaps_1'"%}
+    {% for item in folder1 %}
+    <article class="article  article--page  content  typeset row">
+      <div class='column'>
+        <a target="_blank" href="{{ item.link }}">
+		  <iframe title="vimeo-player" src="{{ item.video_url }}" width="792" height="445.5" frameborder="0" allowfullscreen style="max-width:100%;"></iframe>
+        </a>
+      </div>
+      <div class='column'>
+        <h5 id="{{ item.perm_id }}">{{ item.title }}</h5><br/>
+        {{ item.excerpt }}
+        </a>
+      </div>
+    </article>
+    <hr/>
+  {% endfor %}
+  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
+
+</main>
+
+{% include site-footer.html %}
