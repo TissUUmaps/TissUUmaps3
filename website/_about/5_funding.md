@@ -15,16 +15,16 @@ title: Funding
 				</h7>
 				<div class="row">
 					<div class="column">
-						<img src="/assets/pictures/erc.jpg" width="150" />
+						<img src="{{ site.baseurl }}/assets/pictures/erc.jpg" width="150" />
 					</div>
 					<div class="column">
-						<img src="/assets/pictures/ssf.jpg"  width="200" />
+						<img src="{{ site.baseurl }}/assets/pictures/ssf.jpg"  width="200" />
 					</div>
 					<div class="column">
-						<img src="/assets/pictures/scilifelab.png" width="300"/>
+						<img src="{{ site.baseurl }}/assets/pictures/scilifelab.png" width="300"/>
 					</div>
 					<div class="column">
-						<img src="/assets/pictures/wallenberg.png" width="200"/>
+						<img src="{{ site.baseurl }}/assets/pictures/wallenberg.png" width="200"/>
 					</div>
 				</div>
 		</div>

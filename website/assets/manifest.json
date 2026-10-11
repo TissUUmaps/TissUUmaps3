@@ -19,6 +19,6 @@ sitemap: false
       {% endfor %}
     ],
   {% endif -%}
-  "start_url": "/",
+  "start_url": "{{ "/" | relative_url }}",
   "display": "standalone"
 }

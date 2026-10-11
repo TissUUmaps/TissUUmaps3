@@ -20,7 +20,7 @@ layout: default
       {% for item in site.galleries %}
         <div class="card">
           <div class="img">
-            <a href="#{{ item.path }}"><img src="{{ item.feature_image }}" alt=""></a>
+            <a href="#{{ item.path }}"><img src="{{ item.feature_image | relative_url }}" alt=""></a>
           </div>
           <div class="content">
             <div class="title">
@@ -72,7 +72,7 @@ layout: default
     <article class="article  article--page  content  typeset row">
       <div class='column column_left'>
         <a target="_blank" href="{{ item.link }}">
-          <img src="{{ item.feature_image }}"/>
+          <img src="{{ item.feature_image | relative_url }}"/>
         </a>
       </div>
       <div class='column column_right'>

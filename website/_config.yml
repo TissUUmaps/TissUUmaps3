@@ -101,7 +101,7 @@ logo: "/assets/logos/uulogowhitetuum.png" # Site logo, also used in jekyll-seo-t
 description: "" # Site description and default description, also used in jekyll-seo-tag
 # TissUUmaps is a browser-based  tool for fast visualization and exploration of millions of data points overlaying a tissue sample. TissUUmaps can be used as a web service or locally in your computer, and allows users to share regions of interest and local statistics.
 url: "https://tissuumaps.github.io" # Site url, also used in jekyll-seo-tag
-baseurl: ""
+baseurl: "/TissUUmaps3"
 repo: "https://github.com/TissUUmaps/TissUUmaps"
 email: "christophe.avenel@it.uu.se"
 css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
@@ -128,7 +128,7 @@ navigation_header:
 - title: Tutorials
   url: /tutorials/
 - title: Plugins
-  url: /plugins/
+  url: /plugin-list/
 - title: About us
   url: /about_us/
 
