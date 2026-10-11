@@ -24,6 +24,17 @@ body {
   margin: 0 auto;
 }
 
+.legacy-banner {
+  background: #fff3cd;
+  color: $bodyColour;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  a {
+    color: $linkColour;
+    text-decoration: underline;
+  }
+}
+
 // Header, feature and footer
 .header,
 .footer {
