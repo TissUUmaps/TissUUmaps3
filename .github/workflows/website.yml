@@ -1,0 +1,22 @@
+name: Deploy website
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - "website/**"
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # GitHub Pages builds the Jekyll site from this branch.
+          folder: website
+          clean-exclude: plugins # Deployed by plugins_site.yml.

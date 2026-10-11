@@ -1,0 +1,254 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet">
+    <style>
+body{
+font-family: "Open Sans", arial;
+color:#fff;
+font-weight:300;
+background: #ee9ca7;  
+background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  
+background: linear-gradient(to right, #ffdde1, #ee9ca7); 
+margin:0px;padding:0px;
+}
+
+nav{
+background:#911821;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:105px;
+overflow:hidden;
+-webkit-transition:width .2s linear;
+transition:width .2s linear;
+z-index: 10000;
+border-right: 1px solid rgb(0, 0, 0);
+}
+a, button {
+border: none;
+text-align: left;
+padding: 0px;
+position:relative;
+text-decoration:none;
+color:white;
+font-size: 13px;
+display:table;
+width:105px;
+border-top:1px solid #fff ; 
+background:none; 
+}
+.fa {
+position: relative;
+width: 32px;
+height: 36px;
+text-align: center;
+top:12px; 
+font-size:20px;
+}
+nav .nav-text  {
+position:relative;
+top:12px;
+}
+
+a:hover, button:hover{
+color:#fff;
+background-color:#3863F4; 
+}
+.mid-block
+{
+background-color:#076868;
+text-transform:capitalize;
+box-shadow:inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55), inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);;
+}
+.scrollbar
+{
+height: 90%;
+width: 100%;
+overflow-y: hidden;
+overflow-x: hidden;
+}
+
+#style-1::-webkit-scrollbar-track
+{
+border-radius: 2px;
+}
+
+#style-1::-webkit-scrollbar
+{
+width: 5px;
+background-color: #F7F7F7;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+background-color: #BFBFBF;
+}
+    </style>
+</head>
+
+
+<body>
+    <nav>
+        
+    <div class="scrollbar" id="style-1">
+      <a href="/">
+        <i class="fa fa-home fa-lg"></i>
+        <span class="nav-text">Home</span>
+      </a>
+    
+      <a href="https://tissuumaps-demo.serve.scilifelab.se/human_heart.tmap">
+        <i class="fa fa-heart fa-lg"></i>
+        <span class="nav-text">Heart</span>
+      </a>
+      
+      <a href="https://tissuumaps-demo.serve.scilifelab.se/pipex_spotinspector.tmap">
+        <i class="fa fa-binoculars fa-lg"></i>
+        <span class="nav-text">SpotInspect</span>
+      </a>
+      
+      <a href="https://tissuumaps-demo.serve.scilifelab.se/pipex_multiplex.tmap">
+        <i class="fa fa-object-ungroup fa-lg"></i>
+        <span class="nav-text">Multiplex</span>
+      </a>
+      
+      <a href="https://tissuumaps-demo.serve.scilifelab.se/pipex.tmap">
+        <i class="fa fa-toolbox fa-lg"></i>
+        <span class="nav-text">Plugins</span>
+      </a>
+
+      <a href="https://hdca-sweden.scilifelab.se/tissues-overview/lung/">
+        <i class="fa fa-lungs fa-lg"></i>
+        <span class="nav-text">Lung</span>
+      </a>
+      
+      <a href="https://hdca-spinalbrain.serve.scilifelab.se/2023_spinal_brain_xenium.tmap">
+        <i class="fa fa-brain fa-lg"></i>
+        <span class="nav-text">UMAP</span>
+      </a>
+      
+      <a href="https://tissuumaps-demo.serve.scilifelab.se/p2r_mousebrain.tmap">
+        <i class="fa fa-draw-polygon fa-lg"></i>
+        <span class="nav-text">P2Regions</span>
+      </a>
+      
+      <a href="https://tissuumaps-demo.serve.scilifelab.se/p2r_human_heart.tmap">
+        <i class="fa fa-heart fa-lg"></i>
+        <span class="nav-text">P2Regions</span>
+      </a>
+      <!--
+      <a href="https://tissuumaps-demo.serve.scilifelab.se/Spage2vec_ISS_Qian_et_al.tmap">
+        <i class="fa fa-project-diagram fa-lg"></i>
+        <span class="nav-text">Spage2vec</span>
+      </a>
+      -->
+
+      <a href="https://sthlm3-2020.serve.scilifelab.se/">
+        <i class="fa fa-microscope fa-lg"></i>
+        <span class="nav-text">Prostate</span>
+      </a>
+
+      <a href="https://tissuumaps-demo.serve.scilifelab.se/elections.tmap">
+        <i class="fa fa-flag fa-lg"></i>
+        <span class="nav-text">Elections</span>
+      </a>
+      
+      <a href="https://tissuumaps-demo.serve.scilifelab.se/web/jupyter/visium_hne_adata_crop.html">
+        <i class="fa fa-book fa-lg"></i>
+        <span class="nav-text">Notebook</span>
+      </a>
+      
+      <button onclick="setTimeout(()=>{video()},100);event.preventDefault();">
+        <i class="fa fa-video fa-lg"></i>
+        <span class="nav-text">Video</span>
+      </button>
+      
+</nav>
+<iframe src="/" id="mainIframe" style="width: Calc(100% - 105px);height: 100%;border: 0px;position: absolute;left: 105px;background-color: white;">
+
+</iframe>
+
+<div style="position:absolute;z-index:999999;right:5px;bottom:5px;width:150px;overflow-wrap:break-word;padding:5px; background-color:white;font-size:8px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    <img style="width: 100%;" src="data:image/png;base64,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">
+    <a style="font-size: 12px;color:black !important;" href="https://tissuumaps.github.io/">https://tissuumaps.github.io/</a>
+</div>
+
+<script>
+    function interceptClickEvent(e) {
+        var href;
+        var target = e.target || e.srcElement;
+        console.log(target, target.parentNode , target.tagName, target.parentNode.tagName)
+        if (target.parentNode.tagName === 'A') {
+            target = target.parentNode ;
+        }
+        if (target.tagName === 'A') {
+            href = target.getAttribute('href');
+
+            //put your logic here...
+            if (true) {
+                document.querySelector("#mainIframe").src = href;
+                e.preventDefault();
+            }
+        }
+    }
+
+
+    //listen for link click events at the document level
+    if (document.addEventListener) {
+        document.addEventListener('click', interceptClickEvent);
+    } else if (document.attachEvent) {
+        document.attachEvent('onclick', interceptClickEvent);
+    }
+
+    document.querySelector("#mainIframe").addEventListener("load", ev => {
+        console.log(ev);
+        document.querySelector("#mainIframe").contentWindow.document.addEventListener('click', interceptClickEvent);
+    });
+
+    var time;
+    function video() {
+        var div = document.getElementById("vimeoPlayer");
+        console.log("You are now logged out.", div);
+        if (div === null) {
+          var div = document.createElement("div");
+          div.style.width = "100%";
+          div.style.height = "100%";
+          div.style.position = "fixed";
+          div.style.background = "white";
+          div.style.color = "white";
+          div.style.zIndex = "10000"; 
+          div.innerHTML = '<iframe title="vimeo-player" src="https://player.vimeo.com/video/656087893?h=35cf4e40ed&autoplay=1&loop=1&muted=1" width="100%" height="100%" frameborder="0" allowfullscreen="" allow="autoplay" autoplay="true" style="max-width:100%;"></iframe>';
+          div.id = "vimeoPlayer";
+          document.body.appendChild(div);
+        }
+        clearTimeout(time);
+        //location.href = 'logout.html'
+    }
+
+    function resetTimer() {
+        console.log("Reset");
+        clearTimeout(time);
+        time = setTimeout(video, 2000000)
+        var div = document.getElementById("vimeoPlayer");
+        if (div !== null) {
+          div.parentElement.removeChild(div);
+        }
+        // 1000 milliseconds = 1 second
+    }
+    var inactivityTime = function () {
+      window.onload = resetTimer;
+        
+      // DOM Events
+      document.addEventListener('mousemove', e => {resetTimer()});
+      document.addEventListener('click', e => {resetTimer()});
+
+    }
+    inactivityTime();
+</script>
+
+</body>
+</html>

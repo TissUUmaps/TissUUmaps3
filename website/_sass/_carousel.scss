@@ -1,0 +1,115 @@
+
+.wrapper{
+  width: 100%;
+  overflow-x:hidden;
+}
+.owl-carousel .owl-stage-outer {
+  overflow: visible !important;
+  overflow-y: clip !important;
+}
+.carousel{
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 30px;
+}
+.carousel .card{
+  color: black;
+  text-align: center;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+.owl-dots{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.owl-dot{
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+
+/*
+.owl-carousel {
+    margin-right: auto;
+    margin-left: auto;
+}
+.slider{
+  max-width: 1500px;;
+  display: flex;
+}
+.slider .card{
+  flex: 1;
+  margin: 0 10px;
+  background: #fff;
+}
+.slider .card .img{
+  height: 200px;
+  width: 100%;
+}
+.slider .card .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.slider .card .content{
+  padding: 10px 20px;
+}*/
+
+.card .img{
+    height: 200px;
+    width: 100%;
+}
+.card .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.card .content{
+    padding: 10px 20px;
+}
+.card .content .title{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.6;
+    height: 115px;
+    overflow:hidden;
+}
+.card .content .sub-title{
+  font-size: 20px;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 20px;
+}
+.card .content p{
+  text-align: justify;
+  margin: 10px 0;
+}
+.card .content .btn{
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+.button{
+  background: #911821;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.button:hover{
+  transform: scale(0.9);
+}
