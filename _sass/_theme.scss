@@ -24,14 +24,19 @@ body {
   margin: 0 auto;
 }
 
-// Matches the announcement bar of the TissUUmaps 4 website
+// Matches the announcement bar of the TissUUmaps 4 website. Fixed sizes,
+// since the site font grows with the window width; flex: none so that the
+// flex body does not squeeze it
 .legacy-banner {
-  min-height: 30px;
-  padding: 5px 1rem;
+  flex: none;
+  padding: 5px 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   background: #fff3cd;
   color: #3f3f3f;
-  font-size: 85%;
+  font-family: Lato, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu,
+    Cantarell, "Noto Sans", sans-serif;
+  font-size: 13.6px;
+  line-height: 20px;
   text-align: center;
   a {
     color: inherit;
